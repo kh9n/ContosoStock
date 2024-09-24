@@ -1,0 +1,164 @@
+{
+    "allowCustomDataForDataTypeAny": true,
+    "functions": [
+        {
+            "description": "Get net income (ttm) using given stock ticker",
+            "id": "GETNETINCOME",
+            "name": "GETNETINCOME",
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Get EPS (ttm) using given stock ticker",
+            "id": "GETEPS",
+            "name": "GETEPS",
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Get PE Ratio using given stock ticker",
+            "id": "GETPERATIO",
+            "name": "GETPERATIO",
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Get Forward P/E using given stock ticker",
+            "id": "GETFORWARDPE",
+            "name": "GETFORWARDPE",
+            "options": {
+                "stream": true
+            },
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Get predicted target price using given stock ticker",
+            "id": "GETARGETPRICE",
+            "name": "GETARGETPRICE",
+            "options": {
+                "stream": true
+            },
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Get operation suggestion using given symbols of a stock",
+            "id": "GETOPERATIONSUGGESTION",
+            "name": "GETOPERATIONSUGGESTION",
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                },
+                {
+                    "name": "netInComes",
+                    "type": "any"
+                },
+                {
+                    "name": "eps",
+                    "type": "any"
+                },
+                {
+                    "name": "peRatio",
+                    "type": "any"
+                },
+                {
+                    "name": "forwardedPE",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Get revenue history using given stock ticker",
+            "id": "GETREVENUEHISTORY",
+            "name": "GETREVENUEHISTORY",
+            "options": {
+                "requiresAddress": true
+            },
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix",
+                "type": "string"
+            }
+        },
+        {
+            "description": "Get revenue history using given stock ticker",
+            "id": "GETMARKETCAPHISTORY",
+            "name": "GETMARKETCAPHISTORY",
+            "options": {
+                "requiresAddress": true
+            },
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix",
+                "type": "string"
+            }
+        },
+        {
+            "description": "Displays the current stock price in every 1 second",
+            "id": "GETCURRENTPRICE",
+            "name": "GETCURRENTPRICE",
+            "options": {
+                "stream": true
+            },
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "any"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        }
+    ]
+}
