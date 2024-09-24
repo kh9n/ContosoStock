@@ -1,3 +1,952 @@
-/*! For license information please see taskpane.js.LICENSE.txt */
-!function(){"use strict";var t={98362:function(t,e,r){t.exports=r.p+"assets/logo-filled.png"},58394:function(t,e,r){t.exports=r.p+"1fda685b81e1123773f6.css"}},e={};function r(n){var o=e[n];if(void 0!==o)return o.exports;var c=e[n]={exports:{}};return t[n](c,c.exports,r),c.exports}r.m=t,r.d=function(t,e){for(var n in e)r.o(e,n)&&!r.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},r.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(t){if("object"==typeof window)return window}}(),r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},function(){var t;r.g.importScripts&&(t=r.g.location+"");var e=r.g.document;if(!t&&e&&(e.currentScript&&"SCRIPT"===e.currentScript.tagName.toUpperCase()&&(t=e.currentScript.src),!t)){var n=e.getElementsByTagName("script");if(n.length)for(var o=n.length-1;o>-1&&(!t||!/^http(s?):/.test(t));)t=n[o--].src}if(!t)throw new Error("Automatic publicPath is not supported in this browser");t=t.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),r.p=t}(),r.b=document.baseURI||self.location.href,function(){function t(e){return t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},t(e)}function e(){e=function(){return n};var r,n={},o=Object.prototype,c=o.hasOwnProperty,i=Object.defineProperty||function(t,e,r){t[e]=r.value},a="function"==typeof Symbol?Symbol:{},u=a.iterator||"@@iterator",s=a.asyncIterator||"@@asyncIterator",f=a.toStringTag||"@@toStringTag";function p(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{p({},"")}catch(r){p=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var o=e&&e.prototype instanceof S?e:S,c=Object.create(o.prototype),a=new I(n||[]);return i(c,"_invoke",{value:N(t,r,a)}),c}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}n.wrap=l;var T="suspendedStart",O="suspendedYield",k="executing",E="completed",y={};function S(){}function v(){}function d(){}var m={};p(m,u,(function(){return this}));var w=Object.getPrototypeOf,x=w&&w(w(A([])));x&&x!==o&&c.call(x,u)&&(m=x);var g=d.prototype=S.prototype=Object.create(m);function C(t){["next","throw","return"].forEach((function(e){p(t,e,(function(t){return this._invoke(e,t)}))}))}function R(e,r){function n(o,i,a,u){var s=h(e[o],e,i);if("throw"!==s.type){var f=s.arg,p=f.value;return p&&"object"==t(p)&&c.call(p,"__await")?r.resolve(p.__await).then((function(t){n("next",t,a,u)}),(function(t){n("throw",t,a,u)})):r.resolve(p).then((function(t){f.value=t,a(f)}),(function(t){return n("throw",t,a,u)}))}u(s.arg)}var o;i(this,"_invoke",{value:function(t,e){function c(){return new r((function(r,o){n(t,e,r,o)}))}return o=o?o.then(c,c):c()}})}function N(t,e,n){var o=T;return function(c,i){if(o===k)throw Error("Generator is already running");if(o===E){if("throw"===c)throw i;return{value:r,done:!0}}for(n.method=c,n.arg=i;;){var a=n.delegate;if(a){var u=G(a,n);if(u){if(u===y)continue;return u}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if(o===T)throw o=E,n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);o=k;var s=h(t,e,n);if("normal"===s.type){if(o=n.done?E:O,s.arg===y)continue;return{value:s.arg,done:n.done}}"throw"===s.type&&(o=E,n.method="throw",n.arg=s.arg)}}}function G(t,e){var n=e.method,o=t.iterator[n];if(o===r)return e.delegate=null,"throw"===n&&t.iterator.return&&(e.method="return",e.arg=r,G(t,e),"throw"===e.method)||"return"!==n&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+n+"' method")),y;var c=h(o,t.iterator,e.arg);if("throw"===c.type)return e.method="throw",e.arg=c.arg,e.delegate=null,y;var i=c.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=r),e.delegate=null,y):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,y)}function b(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function P(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function I(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(b,this),this.reset(!0)}function A(e){if(e||""===e){var n=e[u];if(n)return n.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var o=-1,i=function t(){for(;++o<e.length;)if(c.call(e,o))return t.value=e[o],t.done=!1,t;return t.value=r,t.done=!0,t};return i.next=i}}throw new TypeError(t(e)+" is not iterable")}return v.prototype=d,i(g,"constructor",{value:d,configurable:!0}),i(d,"constructor",{value:v,configurable:!0}),v.displayName=p(d,f,"GeneratorFunction"),n.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===v||"GeneratorFunction"===(e.displayName||e.name))},n.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,d):(t.__proto__=d,p(t,f,"GeneratorFunction")),t.prototype=Object.create(g),t},n.awrap=function(t){return{__await:t}},C(R.prototype),p(R.prototype,s,(function(){return this})),n.AsyncIterator=R,n.async=function(t,e,r,o,c){void 0===c&&(c=Promise);var i=new R(l(t,e,r,o),c);return n.isGeneratorFunction(e)?i:i.next().then((function(t){return t.done?t.value:i.next()}))},C(g),p(g,f,"Generator"),p(g,u,(function(){return this})),p(g,"toString",(function(){return"[object Generator]"})),n.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},n.values=A,I.prototype={constructor:I,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=r,this.done=!1,this.delegate=null,this.method="next",this.arg=r,this.tryEntries.forEach(P),!t)for(var e in this)"t"===e.charAt(0)&&c.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=r)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(n,o){return a.type="throw",a.arg=t,e.next=n,o&&(e.method="next",e.arg=r),!!o}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var u=c.call(i,"catchLoc"),s=c.call(i,"finallyLoc");if(u&&s){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!s)throw Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var n=this.tryEntries[r];if(n.tryLoc<=this.prev&&c.call(n,"finallyLoc")&&this.prev<n.finallyLoc){var o=n;break}}o&&("break"===t||"continue"===t)&&o.tryLoc<=e&&e<=o.finallyLoc&&(o=null);var i=o?o.completion:{};return i.type=t,i.arg=e,o?(this.method="next",this.next=o.finallyLoc,y):this.complete(i)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),y},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),P(r),y}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;P(r)}return o}}throw Error("illegal catch attempt")},delegateYield:function(t,e,n){return this.delegate={iterator:A(t),resultName:e,nextLoc:n},"next"===this.method&&(this.arg=r),y}},n}function r(t,e,r,n,o,c,i){try{var a=t[c](i),u=a.value}catch(t){return void r(t)}a.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,c){var i=t.apply(e,n);function a(t){r(i,o,c,a,u,"next",t)}function u(t){r(i,o,c,a,u,"throw",t)}a(void 0)}))}}function o(){return c.apply(this,arguments)}function c(){return(c=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.prev=0,t.next=3,i();case 3:t.next=8;break;case 5:t.prev=5,t.t0=t.catch(0),console.error(t.t0);case 8:case"end":return t.stop()}}),t,null,[[0,5]])})))).apply(this,arguments)}function i(){return a.apply(this,arguments)}function a(){return(a=n(e().mark((function t(){var r,n;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return f("H2:M11"),t.next=3,T();case 3:return t.next=5,W(.5,.1);case 5:return t.next=7,k();case 7:return t.next=9,W(.5,.1);case 9:return t.next=11,y();case 11:return t.next=13,W(.5,.1);case 13:return t.next=15,v();case 15:return t.next=17,W(.5,.1);case 17:return t.next=19,m();case 19:return t.next=21,W(.5,.1);case 21:return t.next=23,l();case 23:return t.next=25,W(.5,.1);case 25:return r=[116,238,191,163,435,217,561,88,228,226],t.next=28,u("$M",r);case 28:return n=[34.31,85,37,20,33,21,24,9,31,25],t.next=31,u("$K",n);case 31:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function u(t,e){return s.apply(this,arguments)}function s(){return(s=n(e().mark((function t(r,n){var o;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:o=0;case 1:if(!(o<n.length)){t.next=7;break}return t.next=4,M(r+"$"+(o+2),n[0]);case 4:o++,t.next=1;break;case 7:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function f(t){return p.apply(this,arguments)}function p(){return p=n(e().mark((function t(r){var o,c,i,a,u,s,f;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:c=function(t,e,r){for(var n=t.slice(),o=0;o<3;o++)n[o]=Math.round(n[o]+r*(e[o]-n[o]));return n},o=20,a=(i=function(t){var e=parseInt(t.slice(1),16);return[e>>16&255,e>>8&255,255&e]})("#CAEAD8"),u=i("#FFFFFF"),s=e().mark((function t(){var i,s;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return i=c(a,u,f/o),s="#".concat(i.map((function(t){return t.toString(16).padStart(2,"0")})).join("")),t.next=5,Excel.run(function(){var t=n(e().mark((function t(n){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return n.workbook.worksheets.getActiveWorksheet().getRange(r).format.fill.color=s,t.next=5,n.sync();case 5:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}());case 5:return t.next=7,new Promise((function(t){return setTimeout(t,100)}));case 7:case"end":return t.stop()}}),t)})),f=0;case 8:if(!(f<=o)){t.next=13;break}return t.delegateYield(s(),"t0",10);case 10:f++,t.next=8;break;case 13:case"end":return t.stop()}}),t)}))),p.apply(this,arguments)}function l(){return h.apply(this,arguments)}function h(){return(h=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,x([["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"],["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"]],"Current Price");case 2:t.sent;case 3:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function T(){return O.apply(this,arguments)}function O(){return(O=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,x([["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"],["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"]],"Net Incomes (ttm)");case 2:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function k(){return E.apply(this,arguments)}function E(){return(E=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,x([["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"],["=CONTOSO.GETEPS([@[Stock Ticker]])"]],"EPS");case 2:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function y(){return S.apply(this,arguments)}function S(){return(S=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,x([["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"],["=CONTOSO.GETPERATIO([@[Stock Ticker]])"]],"PE ratio");case 2:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function v(){return d.apply(this,arguments)}function d(){return(d=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,x([["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"],["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"]],"Forwarded PE");case 2:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function m(){return w.apply(this,arguments)}function w(){return(w=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,x([["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"],["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"]],"Target Price");case 2:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function x(t,e){return g.apply(this,arguments)}function g(){return g=n(e().mark((function t(r,o){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,Excel.run(function(){var t=n(e().mark((function t(n){var c,i,a,u,s;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return(c=n.workbook.worksheets.getActiveWorksheet().tables).load("items"),t.next=4,n.sync();case 4:return i=c.getItemAt(0),a=i.columns.load("items"),t.next=8,n.sync();case 8:if(u=-1,a.items.forEach((function(t,e){t.name===o&&(u=e)})),-1!==u){t.next=12;break}throw new Error("Column '".concat(o,"' not found."));case 12:return(s=a.getItemAt(u)).getDataBodyRange().values=r,t.next=17,n.sync();case 17:return s.getRange().format.autofitColumns(),s.getRange().format.autofitRows(),s.getRange().conditionalFormats.clearAll(),t.next=22,n.sync();case 22:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}());case 2:case"end":return t.stop()}}),t)}))),g.apply(this,arguments)}function C(t,e,r){return R.apply(this,arguments)}function R(){return(R=n(e().mark((function t(r,n,o){var c,i;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return c=r.workbook.worksheets.getActiveWorksheet(),(i=r.workbook.getSelectedRange()).load(["columnIndex","rowIndex","values"]),t.next=5,r.sync();case 5:if(!(i.columnIndex===n&&i.rowIndex<=3&&i.rowIndex>0)){t.next=11;break}return console.log("Stock ticker cell activated: ",i.values[0][0]),c.getRange("B15").values=[["=".concat(o)]],t.next=11,r.sync();case 11:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function N(){return G.apply(this,arguments)}function G(){return(G=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,b();case 2:return t.next=4,W(.5);case 4:return t.next=6,I();case 6:return t.next=8,L();case 8:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function b(){return P.apply(this,arguments)}function P(){return P=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,Excel.run(function(){var t=n(e().mark((function t(r){var o,c,i,a,u,s;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return o=r.workbook.worksheets.getActiveWorksheet(),(c=o.getRange("A15")).values=[["Ticker"]],c.format.font.color="black",c.format.font.bold=!0,t.next=7,r.sync();case 7:return o.load("tables"),t.next=10,r.sync();case 10:return(i=o.tables).load("*"),t.next=14,r.sync();case 14:return(a=i.getItemAt(0)).load("columns, rows"),t.next=18,r.sync();case 18:return(u=a.columns).load("items"),t.next=22,r.sync();case 22:if(s=-1,u.items.forEach((function(t,e){"Stock Ticker"===t.name&&(s=e)})),-1!==s){t.next=26;break}throw new Error("Column 'Stock Ticker' not found.");case 26:o.onSelectionChanged.add(function(){var t=n(e().mark((function t(n){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,C(r,s,n.address);case 2:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}());case 27:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}());case 2:case"end":return t.stop()}}),t)}))),P.apply(this,arguments)}function I(){return A.apply(this,arguments)}function A(){return A=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,Excel.run(function(){var t=n(e().mark((function t(r){var n;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return(n=r.workbook.worksheets.getActiveWorksheet().getRange("A16")).values=[["Revenues (Last 20 quarters)"]],n.format.font.color="black",n.format.font.bold=!0,t.next=6,r.sync();case 6:return r.workbook.worksheets.getActiveWorksheet().getRange("A17").values=[["=CONTOSO.GETREVENUEHISTORY(B15)"]],t.next=10,r.sync();case 10:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}());case 2:case"end":return t.stop()}}),t)}))),A.apply(this,arguments)}function L(){return F.apply(this,arguments)}function F(){return F=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,Excel.run(function(){var t=n(e().mark((function t(r){var n;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return(n=r.workbook.worksheets.getActiveWorksheet().getRange("G16")).values=[["Market Caps (Last 20 quarters)"]],n.format.font.color="black",n.format.font.bold=!0,t.next=6,r.sync();case 6:return r.workbook.worksheets.getActiveWorksheet().getRange("G17").values=[["=CONTOSO.GETMARKETCAPHISTORY(B15)"]],t.next=10,r.sync();case 10:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}());case 2:case"end":return t.stop()}}),t)}))),F.apply(this,arguments)}function W(t,e){return j.apply(this,arguments)}function j(){return(j=n(e().mark((function t(r,n){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r||(r=3),n||(n=.5),t.abrupt("return",new Promise((function(t){var e=Math.max(n,Math.random()*r);window.setTimeout((function(){t()}),1e3*e)})));case 3:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function M(t,e){return U.apply(this,arguments)}function U(){return U=n(e().mark((function t(r,o){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.abrupt("return",Excel.run(function(){var t=n(e().mark((function t(n){var c,i,a,u;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return c=n.workbook.worksheets.getActiveWorksheet(),(i=c.getRange(r)).conditionalFormats.clearAll(),t.next=5,n.sync();case 5:return a=i.conditionalFormats.add(Excel.ConditionalFormatType.iconSet),(u=a.iconSet).style=Excel.IconSet.threeTriangles,u.criteria=[{},{type:Excel.ConditionalFormatIconRuleType.number,operator:Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,formula:"="+o},{type:Excel.ConditionalFormatIconRuleType.number,operator:Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,formula:"="+Math.ceil(1.1*o)}],t.next=11,n.sync();case 11:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}()).catch((function(t){console.log(t)})));case 1:case"end":return t.stop()}}),t)}))),U.apply(this,arguments)}Office.onReady((function(){document.getElementById("sideload-msg").style.display="none",document.getElementById("app-body").style.display="flex",document.getElementById("run").onclick=o,document.getElementById("detail").onclick=N}))}(),new URL(r(58394),r.b),new URL(r(98362),r.b)}();
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./assets/logo-filled.png":
+/*!********************************!*\
+  !*** ./assets/logo-filled.png ***!
+  \********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/logo-filled.png";
+
+/***/ }),
+
+/***/ "./src/taskpane/taskpane.css":
+/*!***********************************!*\
+  !*** ./src/taskpane/taskpane.css ***!
+  \***********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1fda685b81e1123773f6.css";
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	!function() {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	!function() {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	!function() {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"taskpane": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+var __webpack_exports__ = {};
+/*!**********************************!*\
+  !*** ./src/taskpane/taskpane.js ***!
+  \**********************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   addCurrentPrice: function() { return /* binding */ addCurrentPrice; },
+/* harmony export */   addEPS: function() { return /* binding */ addEPS; },
+/* harmony export */   addForwardedPE: function() { return /* binding */ addForwardedPE; },
+/* harmony export */   addMarketCapHistory: function() { return /* binding */ addMarketCapHistory; },
+/* harmony export */   addNetIncomes: function() { return /* binding */ addNetIncomes; },
+/* harmony export */   addOperationSuggestion: function() { return /* binding */ addOperationSuggestion; },
+/* harmony export */   addPERatio: function() { return /* binding */ addPERatio; },
+/* harmony export */   addRevenueHistory: function() { return /* binding */ addRevenueHistory; },
+/* harmony export */   addStockDetail: function() { return /* binding */ addStockDetail; },
+/* harmony export */   addTargetPrice: function() { return /* binding */ addTargetPrice; },
+/* harmony export */   addTicker: function() { return /* binding */ addTicker; },
+/* harmony export */   fillInColumnData: function() { return /* binding */ fillInColumnData; },
+/* harmony export */   fillInTableContent: function() { return /* binding */ fillInTableContent; },
+/* harmony export */   onTickerSelected: function() { return /* binding */ onTickerSelected; },
+/* harmony export */   run: function() { return /* binding */ run; }
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator.return && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, catch: function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+/* global console, document, Excel, Office */
+
+// The initialize function must be run each time a new page is loaded
+Office.onReady(function () {
+  document.getElementById("sideload-msg").style.display = "none";
+  document.getElementById("app-body").style.display = "flex";
+  document.getElementById("run").onclick = run;
+  document.getElementById("detail").onclick = addStockDetail;
+});
+function run() {
+  return _run.apply(this, arguments);
+}
+function _run() {
+  _run = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.prev = 0;
+          _context.next = 3;
+          return fillInTableContent();
+        case 3:
+          _context.next = 8;
+          break;
+        case 5:
+          _context.prev = 5;
+          _context.t0 = _context["catch"](0);
+          console.error(_context.t0);
+        case 8:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee, null, [[0, 5]]);
+  }));
+  return _run.apply(this, arguments);
+}
+function fillInTableContent() {
+  return _fillInTableContent.apply(this, arguments);
+}
+function _fillInTableContent() {
+  _fillInTableContent = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+    var currentPriceBaseData, currentForwardedPEBaseData;
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          changeBackgroundColorGradually("H2:M11");
+          // H
+          _context2.next = 3;
+          return addNetIncomes();
+        case 3:
+          _context2.next = 5;
+          return sleepRandomly(0.5, 0.1);
+        case 5:
+          _context2.next = 7;
+          return addEPS();
+        case 7:
+          _context2.next = 9;
+          return sleepRandomly(0.5, 0.1);
+        case 9:
+          _context2.next = 11;
+          return addPERatio();
+        case 11:
+          _context2.next = 13;
+          return sleepRandomly(0.5, 0.1);
+        case 13:
+          _context2.next = 15;
+          return addForwardedPE();
+        case 15:
+          _context2.next = 17;
+          return sleepRandomly(0.5, 0.1);
+        case 17:
+          _context2.next = 19;
+          return addTargetPrice();
+        case 19:
+          _context2.next = 21;
+          return sleepRandomly(0.5, 0.1);
+        case 21:
+          _context2.next = 23;
+          return addCurrentPrice();
+        case 23:
+          _context2.next = 25;
+          return sleepRandomly(0.5, 0.1);
+        case 25:
+          // // N
+          // await addOperationSuggestion();
+          currentPriceBaseData = [116, 238, 191, 163, 435, 217, 561, 88, 228, 226];
+          _context2.next = 28;
+          return addConditionalFormattingForColumn("$M", currentPriceBaseData);
+        case 28:
+          currentForwardedPEBaseData = [34.31, 85, 37, 20, 33, 21, 24, 9, 31, 25];
+          _context2.next = 31;
+          return addConditionalFormattingForColumn("$K", currentForwardedPEBaseData);
+        case 31:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  }));
+  return _fillInTableContent.apply(this, arguments);
+}
+function addConditionalFormattingForColumn(_x, _x2) {
+  return _addConditionalFormattingForColumn.apply(this, arguments);
+}
+function _addConditionalFormattingForColumn() {
+  _addConditionalFormattingForColumn = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(column, data) {
+    var i;
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      while (1) switch (_context3.prev = _context3.next) {
+        case 0:
+          i = 0;
+        case 1:
+          if (!(i < data.length)) {
+            _context3.next = 7;
+            break;
+          }
+          _context3.next = 4;
+          return setConditionalFormaating(column + "$" + (i + 2), data[0]);
+        case 4:
+          i++;
+          _context3.next = 1;
+          break;
+        case 7:
+        case "end":
+          return _context3.stop();
+      }
+    }, _callee3);
+  }));
+  return _addConditionalFormattingForColumn.apply(this, arguments);
+}
+function changeBackgroundColorGradually(_x3) {
+  return _changeBackgroundColorGradually.apply(this, arguments);
+}
+function _changeBackgroundColorGradually() {
+  _changeBackgroundColorGradually = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(rangeAddress) {
+    var steps, interval, interpolateColor, hexToRgb, deepGreen, white, _loop, step;
+    return _regeneratorRuntime().wrap(function _callee5$(_context6) {
+      while (1) switch (_context6.prev = _context6.next) {
+        case 0:
+          hexToRgb = function _hexToRgb(hex) {
+            var bigint = parseInt(hex.slice(1), 16);
+            return [bigint >> 16 & 255, bigint >> 8 & 255, bigint & 255];
+          };
+          interpolateColor = function _interpolateColor(color1, color2, factor) {
+            var result = color1.slice();
+            for (var i = 0; i < 3; i++) {
+              result[i] = Math.round(result[i] + factor * (color2[i] - result[i]));
+            }
+            return result;
+          };
+          steps = 20; // Number of steps for the transition
+          interval = 100; // Interval in milliseconds between each step
+          // Function to interpolate between two colors
+          // Convert hex color to RGB array
+          deepGreen = hexToRgb("#CAEAD8");
+          white = hexToRgb("#FFFFFF");
+          _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
+            var factor, currentColor, colorHex;
+            return _regeneratorRuntime().wrap(function _loop$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
+                case 0:
+                  factor = step / steps;
+                  currentColor = interpolateColor(deepGreen, white, factor);
+                  colorHex = "#".concat(currentColor.map(function (c) {
+                    return c.toString(16).padStart(2, "0");
+                  }).join(""));
+                  _context5.next = 5;
+                  return Excel.run(/*#__PURE__*/function () {
+                    var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(context) {
+                      var sheet, range;
+                      return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+                        while (1) switch (_context4.prev = _context4.next) {
+                          case 0:
+                            sheet = context.workbook.worksheets.getActiveWorksheet();
+                            range = sheet.getRange(rangeAddress);
+                            range.format.fill.color = colorHex;
+                            _context4.next = 5;
+                            return context.sync();
+                          case 5:
+                          case "end":
+                            return _context4.stop();
+                        }
+                      }, _callee4);
+                    }));
+                    return function (_x13) {
+                      return _ref.apply(this, arguments);
+                    };
+                  }());
+                case 5:
+                  _context5.next = 7;
+                  return new Promise(function (resolve) {
+                    return setTimeout(resolve, interval);
+                  });
+                case 7:
+                case "end":
+                  return _context5.stop();
+              }
+            }, _loop);
+          });
+          step = 0;
+        case 8:
+          if (!(step <= steps)) {
+            _context6.next = 13;
+            break;
+          }
+          return _context6.delegateYield(_loop(), "t0", 10);
+        case 10:
+          step++;
+          _context6.next = 8;
+          break;
+        case 13:
+        case "end":
+          return _context6.stop();
+      }
+    }, _callee5);
+  }));
+  return _changeBackgroundColorGradually.apply(this, arguments);
+}
+function addCurrentPrice() {
+  return _addCurrentPrice.apply(this, arguments);
+}
+function _addCurrentPrice() {
+  _addCurrentPrice = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+    var column;
+    return _regeneratorRuntime().wrap(function _callee6$(_context7) {
+      while (1) switch (_context7.prev = _context7.next) {
+        case 0:
+          _context7.next = 2;
+          return fillInColumnData([["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"]], "Current Price");
+        case 2:
+          column = _context7.sent;
+        case 3:
+        case "end":
+          return _context7.stop();
+      }
+    }, _callee6);
+  }));
+  return _addCurrentPrice.apply(this, arguments);
+}
+function addNetIncomes() {
+  return _addNetIncomes.apply(this, arguments);
+}
+function _addNetIncomes() {
+  _addNetIncomes = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
+    return _regeneratorRuntime().wrap(function _callee7$(_context8) {
+      while (1) switch (_context8.prev = _context8.next) {
+        case 0:
+          _context8.next = 2;
+          return fillInColumnData([["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"]], "Net Incomes (ttm)");
+        case 2:
+        case "end":
+          return _context8.stop();
+      }
+    }, _callee7);
+  }));
+  return _addNetIncomes.apply(this, arguments);
+}
+function addEPS() {
+  return _addEPS.apply(this, arguments);
+}
+function _addEPS() {
+  _addEPS = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
+    return _regeneratorRuntime().wrap(function _callee8$(_context9) {
+      while (1) switch (_context9.prev = _context9.next) {
+        case 0:
+          _context9.next = 2;
+          return fillInColumnData([["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"]], "EPS");
+        case 2:
+        case "end":
+          return _context9.stop();
+      }
+    }, _callee8);
+  }));
+  return _addEPS.apply(this, arguments);
+}
+function addPERatio() {
+  return _addPERatio.apply(this, arguments);
+}
+function _addPERatio() {
+  _addPERatio = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+    return _regeneratorRuntime().wrap(function _callee9$(_context10) {
+      while (1) switch (_context10.prev = _context10.next) {
+        case 0:
+          _context10.next = 2;
+          return fillInColumnData([["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"]], "PE ratio");
+        case 2:
+        case "end":
+          return _context10.stop();
+      }
+    }, _callee9);
+  }));
+  return _addPERatio.apply(this, arguments);
+}
+function addForwardedPE() {
+  return _addForwardedPE.apply(this, arguments);
+}
+function _addForwardedPE() {
+  _addForwardedPE = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+    return _regeneratorRuntime().wrap(function _callee10$(_context11) {
+      while (1) switch (_context11.prev = _context11.next) {
+        case 0:
+          _context11.next = 2;
+          return fillInColumnData([["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"]], "Forwarded PE");
+        case 2:
+        case "end":
+          return _context11.stop();
+      }
+    }, _callee10);
+  }));
+  return _addForwardedPE.apply(this, arguments);
+}
+function addTargetPrice() {
+  return _addTargetPrice.apply(this, arguments);
+}
+function _addTargetPrice() {
+  _addTargetPrice = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+    return _regeneratorRuntime().wrap(function _callee11$(_context12) {
+      while (1) switch (_context12.prev = _context12.next) {
+        case 0:
+          _context12.next = 2;
+          return fillInColumnData([["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"]], "Target Price");
+        case 2:
+        case "end":
+          return _context12.stop();
+      }
+    }, _callee11);
+  }));
+  return _addTargetPrice.apply(this, arguments);
+}
+function addOperationSuggestion() {
+  return _addOperationSuggestion.apply(this, arguments);
+}
+function _addOperationSuggestion() {
+  _addOperationSuggestion = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
+    return _regeneratorRuntime().wrap(function _callee12$(_context13) {
+      while (1) switch (_context13.prev = _context13.next) {
+        case 0:
+          _context13.next = 2;
+          return fillInColumnData([["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"]], "Analysis");
+        case 2:
+        case "end":
+          return _context13.stop();
+      }
+    }, _callee12);
+  }));
+  return _addOperationSuggestion.apply(this, arguments);
+}
+function fillInColumnData(_x4, _x5) {
+  return _fillInColumnData.apply(this, arguments);
+}
+function _fillInColumnData() {
+  _fillInColumnData = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee14(data, columnName) {
+    return _regeneratorRuntime().wrap(function _callee14$(_context15) {
+      while (1) switch (_context15.prev = _context15.next) {
+        case 0:
+          _context15.next = 2;
+          return Excel.run(/*#__PURE__*/function () {
+            var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee13(context) {
+              var tables, table, columns, columnIndex, column, columnRange;
+              return _regeneratorRuntime().wrap(function _callee13$(_context14) {
+                while (1) switch (_context14.prev = _context14.next) {
+                  case 0:
+                    tables = context.workbook.worksheets.getActiveWorksheet().tables;
+                    tables.load("items");
+                    _context14.next = 4;
+                    return context.sync();
+                  case 4:
+                    table = tables.getItemAt(0);
+                    columns = table.columns.load("items");
+                    _context14.next = 8;
+                    return context.sync();
+                  case 8:
+                    // let column = table.columns.add(-1, data, columnName);
+                    columnIndex = -1;
+                    columns.items.forEach(function (column, index) {
+                      if (column.name === columnName) {
+                        columnIndex = index;
+                      }
+                    });
+                    if (!(columnIndex === -1)) {
+                      _context14.next = 12;
+                      break;
+                    }
+                    throw new Error("Column '".concat(columnName, "' not found."));
+                  case 12:
+                    // Step 3: Fill in the data for each row in the identified column
+                    column = columns.getItemAt(columnIndex);
+                    columnRange = column.getDataBodyRange();
+                    columnRange.values = data;
+                    _context14.next = 17;
+                    return context.sync();
+                  case 17:
+                    column.getRange().format.autofitColumns();
+                    column.getRange().format.autofitRows();
+                    column.getRange().conditionalFormats.clearAll();
+                    _context14.next = 22;
+                    return context.sync();
+                  case 22:
+                  case "end":
+                    return _context14.stop();
+                }
+              }, _callee13);
+            }));
+            return function (_x14) {
+              return _ref2.apply(this, arguments);
+            };
+          }());
+        case 2:
+        case "end":
+          return _context15.stop();
+      }
+    }, _callee14);
+  }));
+  return _fillInColumnData.apply(this, arguments);
+}
+function onTickerSelected(_x6, _x7, _x8) {
+  return _onTickerSelected.apply(this, arguments);
+}
+function _onTickerSelected() {
+  _onTickerSelected = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee15(context, stockTickerColumnIndex, address) {
+    var currentSheet, range, anchor;
+    return _regeneratorRuntime().wrap(function _callee15$(_context16) {
+      while (1) switch (_context16.prev = _context16.next) {
+        case 0:
+          currentSheet = context.workbook.worksheets.getActiveWorksheet();
+          range = context.workbook.getSelectedRange();
+          range.load(["columnIndex", "rowIndex", "values"]);
+          _context16.next = 5;
+          return context.sync();
+        case 5:
+          if (!(range.columnIndex === stockTickerColumnIndex && range.rowIndex <= 3 && range.rowIndex > 0)) {
+            _context16.next = 11;
+            break;
+          }
+          // Step 5: Trigger the event if the condition is met
+          console.log("Stock ticker cell activated: ", range.values[0][0]);
+          anchor = currentSheet.getRange("B15");
+          anchor.values = [["=".concat(address)]];
+          _context16.next = 11;
+          return context.sync();
+        case 11:
+        case "end":
+          return _context16.stop();
+      }
+    }, _callee15);
+  }));
+  return _onTickerSelected.apply(this, arguments);
+}
+function addStockDetail() {
+  return _addStockDetail.apply(this, arguments);
+}
+function _addStockDetail() {
+  _addStockDetail = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee16() {
+    return _regeneratorRuntime().wrap(function _callee16$(_context17) {
+      while (1) switch (_context17.prev = _context17.next) {
+        case 0:
+          _context17.next = 2;
+          return addTicker();
+        case 2:
+          _context17.next = 4;
+          return sleepRandomly(0.5);
+        case 4:
+          _context17.next = 6;
+          return addRevenueHistory();
+        case 6:
+          _context17.next = 8;
+          return addMarketCapHistory();
+        case 8:
+        case "end":
+          return _context17.stop();
+      }
+    }, _callee16);
+  }));
+  return _addStockDetail.apply(this, arguments);
+}
+function addTicker() {
+  return _addTicker.apply(this, arguments);
+}
+function _addTicker() {
+  _addTicker = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee19() {
+    return _regeneratorRuntime().wrap(function _callee19$(_context20) {
+      while (1) switch (_context20.prev = _context20.next) {
+        case 0:
+          _context20.next = 2;
+          return Excel.run(/*#__PURE__*/function () {
+            var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee18(context) {
+              var currentSheet, anchor, tables, table, columns, stockTickerColumnIndex;
+              return _regeneratorRuntime().wrap(function _callee18$(_context19) {
+                while (1) switch (_context19.prev = _context19.next) {
+                  case 0:
+                    currentSheet = context.workbook.worksheets.getActiveWorksheet(); // Step 1: Add title
+                    anchor = currentSheet.getRange("A15"); // anchor.load("values");
+                    // await context.sync();
+                    // if (anchor.values[0][0] == "Ticker") {
+                    //   return;
+                    // }
+                    anchor.values = [["Ticker"]];
+                    anchor.format.font.color = "black";
+                    anchor.format.font.bold = true;
+                    _context19.next = 7;
+                    return context.sync();
+                  case 7:
+                    // Step 2: Add event to talbe cell (Column ticker)
+                    currentSheet.load("tables");
+                    _context19.next = 10;
+                    return context.sync();
+                  case 10:
+                    tables = currentSheet.tables;
+                    tables.load("*");
+                    _context19.next = 14;
+                    return context.sync();
+                  case 14:
+                    table = tables.getItemAt(0);
+                    table.load("columns, rows");
+                    _context19.next = 18;
+                    return context.sync();
+                  case 18:
+                    columns = table.columns;
+                    columns.load("items");
+                    _context19.next = 22;
+                    return context.sync();
+                  case 22:
+                    stockTickerColumnIndex = -1;
+                    columns.items.forEach(function (column, index) {
+                      if (column.name === "Stock Ticker") {
+                        stockTickerColumnIndex = index;
+                      }
+                    });
+                    if (!(stockTickerColumnIndex === -1)) {
+                      _context19.next = 26;
+                      break;
+                    }
+                    throw new Error("Column 'Stock Ticker' not found.");
+                  case 26:
+                    // Step 3: Add an event handler to the worksheet to detect cell activation
+                    currentSheet.onSelectionChanged.add(/*#__PURE__*/function () {
+                      var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee17(event) {
+                        return _regeneratorRuntime().wrap(function _callee17$(_context18) {
+                          while (1) switch (_context18.prev = _context18.next) {
+                            case 0:
+                              _context18.next = 2;
+                              return onTickerSelected(context, stockTickerColumnIndex, event.address);
+                            case 2:
+                            case "end":
+                              return _context18.stop();
+                          }
+                        }, _callee17);
+                      }));
+                      return function (_x16) {
+                        return _ref4.apply(this, arguments);
+                      };
+                    }());
+                  case 27:
+                  case "end":
+                    return _context19.stop();
+                }
+              }, _callee18);
+            }));
+            return function (_x15) {
+              return _ref3.apply(this, arguments);
+            };
+          }());
+        case 2:
+        case "end":
+          return _context20.stop();
+      }
+    }, _callee19);
+  }));
+  return _addTicker.apply(this, arguments);
+}
+function addRevenueHistory() {
+  return _addRevenueHistory.apply(this, arguments);
+}
+function _addRevenueHistory() {
+  _addRevenueHistory = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee21() {
+    return _regeneratorRuntime().wrap(function _callee21$(_context22) {
+      while (1) switch (_context22.prev = _context22.next) {
+        case 0:
+          _context22.next = 2;
+          return Excel.run(/*#__PURE__*/function () {
+            var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee20(context) {
+              var anchor, formular;
+              return _regeneratorRuntime().wrap(function _callee20$(_context21) {
+                while (1) switch (_context21.prev = _context21.next) {
+                  case 0:
+                    anchor = context.workbook.worksheets.getActiveWorksheet().getRange("A16");
+                    anchor.values = [["Revenues (Last 20 quarters)"]];
+                    anchor.format.font.color = "black";
+                    anchor.format.font.bold = true;
+                    _context21.next = 6;
+                    return context.sync();
+                  case 6:
+                    formular = context.workbook.worksheets.getActiveWorksheet().getRange("A17");
+                    formular.values = [["=CONTOSO.GETREVENUEHISTORY(B15)"]];
+                    _context21.next = 10;
+                    return context.sync();
+                  case 10:
+                  case "end":
+                    return _context21.stop();
+                }
+              }, _callee20);
+            }));
+            return function (_x17) {
+              return _ref5.apply(this, arguments);
+            };
+          }());
+        case 2:
+        case "end":
+          return _context22.stop();
+      }
+    }, _callee21);
+  }));
+  return _addRevenueHistory.apply(this, arguments);
+}
+function addMarketCapHistory() {
+  return _addMarketCapHistory.apply(this, arguments);
+}
+function _addMarketCapHistory() {
+  _addMarketCapHistory = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee23() {
+    return _regeneratorRuntime().wrap(function _callee23$(_context24) {
+      while (1) switch (_context24.prev = _context24.next) {
+        case 0:
+          _context24.next = 2;
+          return Excel.run(/*#__PURE__*/function () {
+            var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee22(context) {
+              var anchor, formular;
+              return _regeneratorRuntime().wrap(function _callee22$(_context23) {
+                while (1) switch (_context23.prev = _context23.next) {
+                  case 0:
+                    anchor = context.workbook.worksheets.getActiveWorksheet().getRange("G16");
+                    anchor.values = [["Market Caps (Last 20 quarters)"]];
+                    anchor.format.font.color = "black";
+                    anchor.format.font.bold = true;
+                    _context23.next = 6;
+                    return context.sync();
+                  case 6:
+                    formular = context.workbook.worksheets.getActiveWorksheet().getRange("G17");
+                    formular.values = [["=CONTOSO.GETMARKETCAPHISTORY(B15)"]];
+                    _context23.next = 10;
+                    return context.sync();
+                  case 10:
+                  case "end":
+                    return _context23.stop();
+                }
+              }, _callee22);
+            }));
+            return function (_x18) {
+              return _ref6.apply(this, arguments);
+            };
+          }());
+        case 2:
+        case "end":
+          return _context24.stop();
+      }
+    }, _callee23);
+  }));
+  return _addMarketCapHistory.apply(this, arguments);
+}
+function sleepRandomly(_x9, _x10) {
+  return _sleepRandomly.apply(this, arguments);
+}
+function _sleepRandomly() {
+  _sleepRandomly = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee24(prefer, min) {
+    return _regeneratorRuntime().wrap(function _callee24$(_context25) {
+      while (1) switch (_context25.prev = _context25.next) {
+        case 0:
+          if (!prefer) {
+            prefer = 3;
+          }
+          if (!min) {
+            min = 0.5;
+          }
+          return _context25.abrupt("return", new Promise(function (resolver) {
+            var timeSpan = Math.max(min, Math.random() * prefer);
+            window.setTimeout(function () {
+              resolver();
+            }, timeSpan * 1000);
+          }));
+        case 3:
+        case "end":
+          return _context25.stop();
+      }
+    }, _callee24);
+  }));
+  return _sleepRandomly.apply(this, arguments);
+}
+function setConditionalFormaating(_x11, _x12) {
+  return _setConditionalFormaating.apply(this, arguments);
+}
+function _setConditionalFormaating() {
+  _setConditionalFormaating = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee26(rangeStr, base) {
+    return _regeneratorRuntime().wrap(function _callee26$(_context27) {
+      while (1) switch (_context27.prev = _context27.next) {
+        case 0:
+          return _context27.abrupt("return", Excel.run(/*#__PURE__*/function () {
+            var _ref7 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee25(context) {
+              var sheet, range, conditionalFormat, iconSetCF;
+              return _regeneratorRuntime().wrap(function _callee25$(_context26) {
+                while (1) switch (_context26.prev = _context26.next) {
+                  case 0:
+                    // Step 1: Load the Excel workbook and worksheet
+                    sheet = context.workbook.worksheets.getActiveWorksheet(); // Step 2: Access the specific range of cells you want to apply conditional formatting to
+                    range = sheet.getRange(rangeStr);
+                    range.conditionalFormats.clearAll();
+                    _context26.next = 5;
+                    return context.sync();
+                  case 5:
+                    // Step 3: Add an icon set conditional format to the range
+                    conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.iconSet); // Step 4: Configure the icon set settings with the specified rules
+                    iconSetCF = conditionalFormat.iconSet;
+                    iconSetCF.style = Excel.IconSet.threeTriangles;
+
+                    /*
+                        The iconSetCF.criteria array is automatically prepopulated with
+                        criterion elements whose properties have been given default settings.
+                        You can't write to each property of a criterion directly. Instead,
+                        replace the whole criteria object.
+                         With a "three*" icon set style, such as "threeTriangles", the third
+                        element in the criteria array (criteria[2]) defines the "top" icon;
+                        e.g., a green triangle. The second (criteria[1]) defines the "middle"
+                        icon. The first (criteria[0]) defines the "low" icon, but it
+                        can often be left empty as the following object shows, because every
+                        cell that does not match the other two criteria always gets the low
+                        icon.            
+                    */
+                    iconSetCF.criteria = [{}, {
+                      type: Excel.ConditionalFormatIconRuleType.number,
+                      operator: Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,
+                      formula: "=" + base
+                    }, {
+                      type: Excel.ConditionalFormatIconRuleType.number,
+                      operator: Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,
+                      formula: "=" + Math.ceil(base * 1.1)
+                    }];
+
+                    // Step 5: Sync the context to apply the changes
+                    _context26.next = 11;
+                    return context.sync();
+                  case 11:
+                  case "end":
+                    return _context26.stop();
+                }
+              }, _callee25);
+            }));
+            return function (_x19) {
+              return _ref7.apply(this, arguments);
+            };
+          }()).catch(function (error) {
+            console.log(error);
+          }));
+        case 1:
+        case "end":
+          return _context27.stop();
+      }
+    }, _callee26);
+  }));
+  return _setConditionalFormaating.apply(this, arguments);
+}
+}();
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+/*!************************************!*\
+  !*** ./src/taskpane/taskpane.html ***!
+  \************************************/
+__webpack_require__.r(__webpack_exports__);
+// Imports
+var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./taskpane.css */ "./src/taskpane/taskpane.css"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../assets/logo-filled.png */ "./assets/logo-filled.png"), __webpack_require__.b);
+// Module
+var code = "<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->\n<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->\n\n<!DOCTYPE html>\n<html>\n\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Contoso Task Pane Add-in</title>\n\n    <!-- Office JavaScript API -->\n    <" + "script type=\"text/javascript\" src=\"https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js\"><" + "/script>\n\n    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->\n    <link rel=\"stylesheet\" href=\"https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css\"/>\n\n    <!-- Template styles -->\n    <link href=\"" + ___HTML_LOADER_IMPORT_0___ + "\" rel=\"stylesheet\" type=\"text/css\" />\n</head>\n\n<body class=\"ms-font-m ms-welcome ms-Fabric\">\n    <header class=\"ms-welcome__header ms-bgColor-neutralLighter\">\n        <img width=\"90\" height=\"90\" src=\"" + ___HTML_LOADER_IMPORT_1___ + "\" alt=\"Contoso\" title=\"Contoso\" />\n        <h1 class=\"ms-font-su\">Welcome</h1>\n    </header>\n    <section id=\"sideload-msg\" class=\"ms-welcome__main\">\n        <h2 class=\"ms-font-xl\">Please <a target=\"_blank\" href=\"https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing\">sideload</a> your add-in to see app body.</h2>\n    </section>\n    <main id=\"app-body\" class=\"ms-welcome__main\" style=\"display: none;\">\n        <h2 class=\"ms-font-xl\"> Discover what Office Add-ins can do for you today! </h2>\n        <ul class=\"ms-List ms-welcome__features\">\n            <li class=\"ms-ListItem\">\n                <i class=\"ms-Icon ms-Icon--Ribbon ms-font-xl\"></i>\n                <span class=\"ms-font-m\">Achieve more with Office integration</span>\n            </li>\n            <li class=\"ms-ListItem\">\n                <i class=\"ms-Icon ms-Icon--Unlock ms-font-xl\"></i>\n                <span class=\"ms-font-m\">Unlock features and functionality</span>\n            </li>\n            <li class=\"ms-ListItem\">\n                <i class=\"ms-Icon ms-Icon--Design ms-font-xl\"></i>\n                <span class=\"ms-font-m\">Create and visualize like a pro</span>\n            </li>\n        </ul>\n        <p class=\"ms-font-l\">Modify the source files, then click <b>Run</b>.</p>\n        <div role=\"button\" id=\"run\" class=\"ms-welcome__action ms-Button ms-Button--hero ms-font-xl\">\n            <span class=\"ms-Button-label\">Run</span>\n        </div>\n        <div role=\"button\" id=\"detail\" class=\"ms-welcome__action ms-Button ms-Button--hero ms-font-xl\">\n            <span class=\"ms-Button-label\">Show stock detail</span>\n        </div>\n        <p><label id=\"item-subject\"></label></p>\n    </main>\n</body>\n\n</html>\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+}();
+/******/ })()
+;
 //# sourceMappingURL=taskpane.js.map
