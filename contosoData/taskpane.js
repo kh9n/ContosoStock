@@ -273,20 +273,56 @@ function _addConditionalFormattingForColumn() {
         case 0:
           return _context5.abrupt("return", Excel.run(/*#__PURE__*/function () {
             var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(context) {
-              var sheet, i, j, column, rangeStr, base, range, conditionalFormat, iconSetCF;
+              var sheet, conditionalFormats, i, j, column, rangeStr, range, conditionalFormat, x, y, base, _conditionalFormat, iconSetCF;
               return _regeneratorRuntime().wrap(function _callee4$(_context4) {
                 while (1) switch (_context4.prev = _context4.next) {
                   case 0:
-                    sheet = context.workbook.worksheets.getActiveWorksheet();
+                    sheet = context.workbook.worksheets.getActiveWorksheet(); // for (let i = 0; i < data.length; i++) {
+                    //   for (let j = 0; j < data[i][1].length; j++) {
+                    //     let column = data[i][0];
+                    //     let rangeStr = column + "$" + (j + 2);
+                    //     let base = data[i][j];
+                    //     let range = sheet.getRange(rangeStr);
+                    //     range.conditionalFormats.clearAll();
+                    //     let conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.iconSet);
+                    //     const iconSetCF = conditionalFormat.iconSet;
+                    //     iconSetCF.style = Excel.IconSet.threeTriangles;
+                    //     iconSetCF.criteria = [
+                    //       {},
+                    //       {
+                    //         type: Excel.ConditionalFormatIconRuleType.number,
+                    //         operator: Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,
+                    //         formula: "=" + base,
+                    //       },
+                    //       {
+                    //         type: Excel.ConditionalFormatIconRuleType.number,
+                    //         operator: Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,
+                    //         formula: "=" + Math.ceil(base * 1.1),
+                    //       },
+                    //     ];
+                    //   }
+                    // }
+                    conditionalFormats = [];
                     for (i = 0; i < data.length; i++) {
+                      conditionalFormats[i] = [];
                       for (j = 0; j < data[i][1].length; j++) {
                         column = data[i][0];
                         rangeStr = column + "$" + (j + 2);
-                        base = data[i][j];
                         range = sheet.getRange(rangeStr);
                         range.conditionalFormats.clearAll();
                         conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.iconSet);
-                        iconSetCF = conditionalFormat.iconSet;
+                        conditionalFormat.load("iconSet");
+                        conditionalFormats[i][j] = conditionalFormat;
+                      }
+                    }
+                    _context4.next = 5;
+                    return context.sync();
+                  case 5:
+                    for (x = 0; x < data.length; x++) {
+                      for (y = 0; y < data[x][1].length; y++) {
+                        base = data[x][1][y];
+                        _conditionalFormat = conditionalFormats[x][y];
+                        iconSetCF = _conditionalFormat.iconSet;
                         iconSetCF.style = Excel.IconSet.threeTriangles;
                         iconSetCF.criteria = [{}, {
                           type: Excel.ConditionalFormatIconRuleType.number,
@@ -299,9 +335,9 @@ function _addConditionalFormattingForColumn() {
                         }];
                       }
                     }
-                    _context4.next = 4;
+                    _context4.next = 8;
                     return context.sync();
-                  case 4:
+                  case 8:
                   case "end":
                     return _context4.stop();
                 }
