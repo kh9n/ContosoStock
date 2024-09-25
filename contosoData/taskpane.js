@@ -284,8 +284,8 @@ function _changeBackgroundColorGradually() {
             }
             return result;
           };
-          steps = 20; // Number of steps for the transition
-          interval = 100; // Interval in milliseconds between each step
+          steps = 10; // Number of steps for the transition
+          interval = 200; // Interval in milliseconds between each step
           // Function to interpolate between two colors
           // Convert hex color to RGB array
           deepGreen = hexToRgb("#CAEAD8");
