@@ -151,18 +151,10 @@ var __webpack_exports__ = {};
   \**********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   addCurrentPrice: function() { return /* binding */ addCurrentPrice; },
-/* harmony export */   addEPS: function() { return /* binding */ addEPS; },
-/* harmony export */   addForwardedPE: function() { return /* binding */ addForwardedPE; },
 /* harmony export */   addMarketCapHistory: function() { return /* binding */ addMarketCapHistory; },
-/* harmony export */   addNetIncomes: function() { return /* binding */ addNetIncomes; },
-/* harmony export */   addOperationSuggestion: function() { return /* binding */ addOperationSuggestion; },
-/* harmony export */   addPERatio: function() { return /* binding */ addPERatio; },
 /* harmony export */   addRevenueHistory: function() { return /* binding */ addRevenueHistory; },
 /* harmony export */   addStockDetail: function() { return /* binding */ addStockDetail; },
-/* harmony export */   addTargetPrice: function() { return /* binding */ addTargetPrice; },
 /* harmony export */   addTicker: function() { return /* binding */ addTicker; },
-/* harmony export */   fillInColumnData: function() { return /* binding */ fillInColumnData; },
 /* harmony export */   fillInTableContent: function() { return /* binding */ fillInTableContent; },
 /* harmony export */   onTickerSelected: function() { return /* binding */ onTickerSelected; },
 /* harmony export */   run: function() { return /* binding */ run; }
@@ -215,410 +207,150 @@ function fillInTableContent() {
   return _fillInTableContent.apply(this, arguments);
 }
 function _fillInTableContent() {
-  _fillInTableContent = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+  _fillInTableContent = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
     var currentPriceBaseData, currentForwardedPEBaseData;
-    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-      while (1) switch (_context2.prev = _context2.next) {
-        case 0:
-          changeBackgroundColorGradually("H2:M11");
-          // H
-          _context2.next = 3;
-          return addNetIncomes();
-        case 3:
-          _context2.next = 5;
-          return sleepRandomly(0.5, 0.1);
-        case 5:
-          _context2.next = 7;
-          return addEPS();
-        case 7:
-          _context2.next = 9;
-          return sleepRandomly(0.5, 0.1);
-        case 9:
-          _context2.next = 11;
-          return addPERatio();
-        case 11:
-          _context2.next = 13;
-          return sleepRandomly(0.5, 0.1);
-        case 13:
-          _context2.next = 15;
-          return addForwardedPE();
-        case 15:
-          _context2.next = 17;
-          return sleepRandomly(0.5, 0.1);
-        case 17:
-          _context2.next = 19;
-          return addTargetPrice();
-        case 19:
-          _context2.next = 21;
-          return sleepRandomly(0.5, 0.1);
-        case 21:
-          _context2.next = 23;
-          return addCurrentPrice();
-        case 23:
-          _context2.next = 25;
-          return sleepRandomly(0.5, 0.1);
-        case 25:
-          // // N
-          // await addOperationSuggestion();
-          currentPriceBaseData = [116, 238, 191, 163, 435, 217, 561, 88, 228, 226];
-          _context2.next = 28;
-          return addConditionalFormattingForColumn("$M", currentPriceBaseData);
-        case 28:
-          currentForwardedPEBaseData = [34.31, 85, 37, 20, 33, 21, 24, 9, 31, 25];
-          _context2.next = 31;
-          return addConditionalFormattingForColumn("$K", currentForwardedPEBaseData);
-        case 31:
-        case "end":
-          return _context2.stop();
-      }
-    }, _callee2);
-  }));
-  return _fillInTableContent.apply(this, arguments);
-}
-function addConditionalFormattingForColumn(_x, _x2) {
-  return _addConditionalFormattingForColumn.apply(this, arguments);
-}
-function _addConditionalFormattingForColumn() {
-  _addConditionalFormattingForColumn = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(column, data) {
-    var i;
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          i = 0;
-        case 1:
-          if (!(i < data.length)) {
-            _context3.next = 7;
-            break;
-          }
-          _context3.next = 4;
-          return setConditionalFormaating(column + "$" + (i + 2), data[0]);
-        case 4:
-          i++;
-          _context3.next = 1;
-          break;
-        case 7:
+          _context3.next = 2;
+          return Excel.run(/*#__PURE__*/function () {
+            var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(context) {
+              var sheet, rangeNetIncome, valueNetIncome, rangeEPS, valueEPS, rangePERatio, valuePERatio, rangeFrdPE, valueFrdPE, rangeTrgPrice, valueTrgPrice, rangeCPrice, valueCPrice;
+              return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+                while (1) switch (_context2.prev = _context2.next) {
+                  case 0:
+                    sheet = context.workbook.worksheets.getActiveWorksheet();
+                    rangeNetIncome = sheet.getRange("H2:H11");
+                    valueNetIncome = [["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"]];
+                    rangeNetIncome.values = valueNetIncome;
+                    rangeEPS = sheet.getRange("I2:I11");
+                    valueEPS = [["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"]];
+                    rangeEPS.values = valueEPS;
+                    rangePERatio = sheet.getRange("J2:J11");
+                    valuePERatio = [["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"]];
+                    rangePERatio.values = valuePERatio;
+                    rangeFrdPE = sheet.getRange("K2:K11");
+                    valueFrdPE = [["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"]];
+                    rangeFrdPE.values = valueFrdPE;
+                    rangeTrgPrice = sheet.getRange("L2:L11");
+                    valueTrgPrice = [["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"]];
+                    rangeTrgPrice.values = valueTrgPrice;
+                    rangeCPrice = sheet.getRange("M2:M11");
+                    valueCPrice = [["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"]];
+                    rangeCPrice.values = valueCPrice;
+                    _context2.next = 21;
+                    return context.sync();
+                  case 21:
+                  case "end":
+                    return _context2.stop();
+                }
+              }, _callee2);
+            }));
+            return function (_x9) {
+              return _ref.apply(this, arguments);
+            };
+          }());
+        case 2:
+          currentPriceBaseData = [116, 238, 191, 163, 435, 217, 561, 88, 228, 226];
+          currentForwardedPEBaseData = [34.31, 85, 37, 20, 33, 21, 24, 9, 31, 25];
+          _context3.next = 6;
+          return addConditionalFormattingForColumn([["$M", currentPriceBaseData], ["$K", currentForwardedPEBaseData]]);
+        case 6:
         case "end":
           return _context3.stop();
       }
     }, _callee3);
   }));
+  return _fillInTableContent.apply(this, arguments);
+}
+function addConditionalFormattingForColumn(_x) {
   return _addConditionalFormattingForColumn.apply(this, arguments);
 }
-function changeBackgroundColorGradually(_x3) {
-  return _changeBackgroundColorGradually.apply(this, arguments);
-}
-function _changeBackgroundColorGradually() {
-  _changeBackgroundColorGradually = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(rangeAddress) {
-    var steps, interval, interpolateColor, hexToRgb, deepGreen, white, _loop, step;
-    return _regeneratorRuntime().wrap(function _callee5$(_context6) {
-      while (1) switch (_context6.prev = _context6.next) {
+function _addConditionalFormattingForColumn() {
+  _addConditionalFormattingForColumn = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(data) {
+    return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+      while (1) switch (_context5.prev = _context5.next) {
         case 0:
-          hexToRgb = function _hexToRgb(hex) {
-            var bigint = parseInt(hex.slice(1), 16);
-            return [bigint >> 16 & 255, bigint >> 8 & 255, bigint & 255];
-          };
-          interpolateColor = function _interpolateColor(color1, color2, factor) {
-            var result = color1.slice();
-            for (var i = 0; i < 3; i++) {
-              result[i] = Math.round(result[i] + factor * (color2[i] - result[i]));
-            }
-            return result;
-          };
-          steps = 20; // Number of steps for the transition
-          interval = 100; // Interval in milliseconds between each step
-          // Function to interpolate between two colors
-          // Convert hex color to RGB array
-          deepGreen = hexToRgb("#CAEAD8");
-          white = hexToRgb("#FFFFFF");
-          _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
-            var factor, currentColor, colorHex;
-            return _regeneratorRuntime().wrap(function _loop$(_context5) {
-              while (1) switch (_context5.prev = _context5.next) {
-                case 0:
-                  factor = step / steps;
-                  currentColor = interpolateColor(deepGreen, white, factor);
-                  colorHex = "#".concat(currentColor.map(function (c) {
-                    return c.toString(16).padStart(2, "0");
-                  }).join(""));
-                  _context5.next = 5;
-                  return Excel.run(/*#__PURE__*/function () {
-                    var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(context) {
-                      var sheet, range;
-                      return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-                        while (1) switch (_context4.prev = _context4.next) {
-                          case 0:
-                            sheet = context.workbook.worksheets.getActiveWorksheet();
-                            range = sheet.getRange(rangeAddress);
-                            range.format.fill.color = colorHex;
-                            _context4.next = 5;
-                            return context.sync();
-                          case 5:
-                          case "end":
-                            return _context4.stop();
-                        }
-                      }, _callee4);
-                    }));
-                    return function (_x13) {
-                      return _ref.apply(this, arguments);
-                    };
-                  }());
-                case 5:
-                  _context5.next = 7;
-                  return new Promise(function (resolve) {
-                    return setTimeout(resolve, interval);
-                  });
-                case 7:
-                case "end":
-                  return _context5.stop();
-              }
-            }, _loop);
-          });
-          step = 0;
-        case 8:
-          if (!(step <= steps)) {
-            _context6.next = 13;
-            break;
-          }
-          return _context6.delegateYield(_loop(), "t0", 10);
-        case 10:
-          step++;
-          _context6.next = 8;
-          break;
-        case 13:
+          return _context5.abrupt("return", Excel.run(/*#__PURE__*/function () {
+            var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(context) {
+              var sheet, i, j, column, rangeStr, base, range, conditionalFormat, iconSetCF;
+              return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+                while (1) switch (_context4.prev = _context4.next) {
+                  case 0:
+                    sheet = context.workbook.worksheets.getActiveWorksheet();
+                    for (i = 0; i < data.length; i++) {
+                      for (j = 0; j < data[i][1].length; j++) {
+                        column = data[i][0];
+                        rangeStr = column + "$" + (j + 2);
+                        base = data[i][j];
+                        range = sheet.getRange(rangeStr);
+                        range.conditionalFormats.clearAll();
+                        conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.iconSet);
+                        iconSetCF = conditionalFormat.iconSet;
+                        iconSetCF.style = Excel.IconSet.threeTriangles;
+                        iconSetCF.criteria = [{}, {
+                          type: Excel.ConditionalFormatIconRuleType.number,
+                          operator: Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,
+                          formula: "=" + base
+                        }, {
+                          type: Excel.ConditionalFormatIconRuleType.number,
+                          operator: Excel.ConditionalIconCriterionOperator.greaterThanOrEqual,
+                          formula: "=" + Math.ceil(base * 1.1)
+                        }];
+                      }
+                    }
+                    _context4.next = 4;
+                    return context.sync();
+                  case 4:
+                  case "end":
+                    return _context4.stop();
+                }
+              }, _callee4);
+            }));
+            return function (_x10) {
+              return _ref2.apply(this, arguments);
+            };
+          }()).catch(function (error) {
+            console.log(error);
+          }));
+        case 1:
         case "end":
-          return _context6.stop();
+          return _context5.stop();
       }
     }, _callee5);
   }));
-  return _changeBackgroundColorGradually.apply(this, arguments);
+  return _addConditionalFormattingForColumn.apply(this, arguments);
 }
-function addCurrentPrice() {
-  return _addCurrentPrice.apply(this, arguments);
-}
-function _addCurrentPrice() {
-  _addCurrentPrice = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
-    var column;
-    return _regeneratorRuntime().wrap(function _callee6$(_context7) {
-      while (1) switch (_context7.prev = _context7.next) {
-        case 0:
-          _context7.next = 2;
-          return fillInColumnData([["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETCURRENTPRICE([@[Stock Ticker]])"]], "Current Price");
-        case 2:
-          column = _context7.sent;
-        case 3:
-        case "end":
-          return _context7.stop();
-      }
-    }, _callee6);
-  }));
-  return _addCurrentPrice.apply(this, arguments);
-}
-function addNetIncomes() {
-  return _addNetIncomes.apply(this, arguments);
-}
-function _addNetIncomes() {
-  _addNetIncomes = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
-    return _regeneratorRuntime().wrap(function _callee7$(_context8) {
-      while (1) switch (_context8.prev = _context8.next) {
-        case 0:
-          _context8.next = 2;
-          return fillInColumnData([["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"], ["=CONTOSO.GETNETINCOME([@[Stock Ticker]])"]], "Net Incomes (ttm)");
-        case 2:
-        case "end":
-          return _context8.stop();
-      }
-    }, _callee7);
-  }));
-  return _addNetIncomes.apply(this, arguments);
-}
-function addEPS() {
-  return _addEPS.apply(this, arguments);
-}
-function _addEPS() {
-  _addEPS = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
-    return _regeneratorRuntime().wrap(function _callee8$(_context9) {
-      while (1) switch (_context9.prev = _context9.next) {
-        case 0:
-          _context9.next = 2;
-          return fillInColumnData([["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"], ["=CONTOSO.GETEPS([@[Stock Ticker]])"]], "EPS");
-        case 2:
-        case "end":
-          return _context9.stop();
-      }
-    }, _callee8);
-  }));
-  return _addEPS.apply(this, arguments);
-}
-function addPERatio() {
-  return _addPERatio.apply(this, arguments);
-}
-function _addPERatio() {
-  _addPERatio = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
-    return _regeneratorRuntime().wrap(function _callee9$(_context10) {
-      while (1) switch (_context10.prev = _context10.next) {
-        case 0:
-          _context10.next = 2;
-          return fillInColumnData([["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"], ["=CONTOSO.GETPERATIO([@[Stock Ticker]])"]], "PE ratio");
-        case 2:
-        case "end":
-          return _context10.stop();
-      }
-    }, _callee9);
-  }));
-  return _addPERatio.apply(this, arguments);
-}
-function addForwardedPE() {
-  return _addForwardedPE.apply(this, arguments);
-}
-function _addForwardedPE() {
-  _addForwardedPE = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
-    return _regeneratorRuntime().wrap(function _callee10$(_context11) {
-      while (1) switch (_context11.prev = _context11.next) {
-        case 0:
-          _context11.next = 2;
-          return fillInColumnData([["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"], ["=CONTOSO.GETFORWARDPE([@[Stock Ticker]])"]], "Forwarded PE");
-        case 2:
-        case "end":
-          return _context11.stop();
-      }
-    }, _callee10);
-  }));
-  return _addForwardedPE.apply(this, arguments);
-}
-function addTargetPrice() {
-  return _addTargetPrice.apply(this, arguments);
-}
-function _addTargetPrice() {
-  _addTargetPrice = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
-    return _regeneratorRuntime().wrap(function _callee11$(_context12) {
-      while (1) switch (_context12.prev = _context12.next) {
-        case 0:
-          _context12.next = 2;
-          return fillInColumnData([["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"], ["=CONTOSO.GETARGETPRICE([@[Stock Ticker]])"]], "Target Price");
-        case 2:
-        case "end":
-          return _context12.stop();
-      }
-    }, _callee11);
-  }));
-  return _addTargetPrice.apply(this, arguments);
-}
-function addOperationSuggestion() {
-  return _addOperationSuggestion.apply(this, arguments);
-}
-function _addOperationSuggestion() {
-  _addOperationSuggestion = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
-    return _regeneratorRuntime().wrap(function _callee12$(_context13) {
-      while (1) switch (_context13.prev = _context13.next) {
-        case 0:
-          _context13.next = 2;
-          return fillInColumnData([["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"], ["=CONTOSO.GETOPERATIONSUGGESTION([@[Stock Ticker]], [@[Net Incomes (ttm)]], [@[EPS]], [@[PE ratio]], [@[Forwarded PE]])"]], "Analysis");
-        case 2:
-        case "end":
-          return _context13.stop();
-      }
-    }, _callee12);
-  }));
-  return _addOperationSuggestion.apply(this, arguments);
-}
-function fillInColumnData(_x4, _x5) {
-  return _fillInColumnData.apply(this, arguments);
-}
-function _fillInColumnData() {
-  _fillInColumnData = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee14(data, columnName) {
-    return _regeneratorRuntime().wrap(function _callee14$(_context15) {
-      while (1) switch (_context15.prev = _context15.next) {
-        case 0:
-          _context15.next = 2;
-          return Excel.run(/*#__PURE__*/function () {
-            var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee13(context) {
-              var tables, table, columns, columnIndex, column, columnRange;
-              return _regeneratorRuntime().wrap(function _callee13$(_context14) {
-                while (1) switch (_context14.prev = _context14.next) {
-                  case 0:
-                    tables = context.workbook.worksheets.getActiveWorksheet().tables;
-                    tables.load("items");
-                    _context14.next = 4;
-                    return context.sync();
-                  case 4:
-                    table = tables.getItemAt(0);
-                    columns = table.columns.load("items");
-                    _context14.next = 8;
-                    return context.sync();
-                  case 8:
-                    // let column = table.columns.add(-1, data, columnName);
-                    columnIndex = -1;
-                    columns.items.forEach(function (column, index) {
-                      if (column.name === columnName) {
-                        columnIndex = index;
-                      }
-                    });
-                    if (!(columnIndex === -1)) {
-                      _context14.next = 12;
-                      break;
-                    }
-                    throw new Error("Column '".concat(columnName, "' not found."));
-                  case 12:
-                    // Step 3: Fill in the data for each row in the identified column
-                    column = columns.getItemAt(columnIndex);
-                    columnRange = column.getDataBodyRange();
-                    columnRange.values = data;
-                    _context14.next = 17;
-                    return context.sync();
-                  case 17:
-                    column.getRange().format.autofitColumns();
-                    column.getRange().format.autofitRows();
-                    column.getRange().conditionalFormats.clearAll();
-                    _context14.next = 22;
-                    return context.sync();
-                  case 22:
-                  case "end":
-                    return _context14.stop();
-                }
-              }, _callee13);
-            }));
-            return function (_x14) {
-              return _ref2.apply(this, arguments);
-            };
-          }());
-        case 2:
-        case "end":
-          return _context15.stop();
-      }
-    }, _callee14);
-  }));
-  return _fillInColumnData.apply(this, arguments);
-}
-function onTickerSelected(_x6, _x7, _x8) {
+function onTickerSelected(_x2, _x3, _x4) {
   return _onTickerSelected.apply(this, arguments);
 }
 function _onTickerSelected() {
-  _onTickerSelected = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee15(context, stockTickerColumnIndex, address) {
+  _onTickerSelected = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6(context, stockTickerColumnIndex, address) {
     var currentSheet, range, anchor;
-    return _regeneratorRuntime().wrap(function _callee15$(_context16) {
-      while (1) switch (_context16.prev = _context16.next) {
+    return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+      while (1) switch (_context6.prev = _context6.next) {
         case 0:
           currentSheet = context.workbook.worksheets.getActiveWorksheet();
           range = context.workbook.getSelectedRange();
           range.load(["columnIndex", "rowIndex", "values"]);
-          _context16.next = 5;
+          _context6.next = 5;
           return context.sync();
         case 5:
           if (!(range.columnIndex === stockTickerColumnIndex && range.rowIndex <= 3 && range.rowIndex > 0)) {
-            _context16.next = 11;
+            _context6.next = 11;
             break;
           }
           // Step 5: Trigger the event if the condition is met
           console.log("Stock ticker cell activated: ", range.values[0][0]);
           anchor = currentSheet.getRange("B15");
           anchor.values = [["=".concat(address)]];
-          _context16.next = 11;
+          _context6.next = 11;
           return context.sync();
         case 11:
         case "end":
-          return _context16.stop();
+          return _context6.stop();
       }
-    }, _callee15);
+    }, _callee6);
   }));
   return _onTickerSelected.apply(this, arguments);
 }
@@ -626,26 +358,26 @@ function addStockDetail() {
   return _addStockDetail.apply(this, arguments);
 }
 function _addStockDetail() {
-  _addStockDetail = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee16() {
-    return _regeneratorRuntime().wrap(function _callee16$(_context17) {
-      while (1) switch (_context17.prev = _context17.next) {
+  _addStockDetail = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
+    return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+      while (1) switch (_context7.prev = _context7.next) {
         case 0:
-          _context17.next = 2;
+          _context7.next = 2;
           return addTicker();
         case 2:
-          _context17.next = 4;
+          _context7.next = 4;
           return sleepRandomly(0.5);
         case 4:
-          _context17.next = 6;
+          _context7.next = 6;
           return addRevenueHistory();
         case 6:
-          _context17.next = 8;
+          _context7.next = 8;
           return addMarketCapHistory();
         case 8:
         case "end":
-          return _context17.stop();
+          return _context7.stop();
       }
-    }, _callee16);
+    }, _callee7);
   }));
   return _addStockDetail.apply(this, arguments);
 }
@@ -653,16 +385,16 @@ function addTicker() {
   return _addTicker.apply(this, arguments);
 }
 function _addTicker() {
-  _addTicker = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee19() {
-    return _regeneratorRuntime().wrap(function _callee19$(_context20) {
-      while (1) switch (_context20.prev = _context20.next) {
+  _addTicker = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+    return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+      while (1) switch (_context10.prev = _context10.next) {
         case 0:
-          _context20.next = 2;
+          _context10.next = 2;
           return Excel.run(/*#__PURE__*/function () {
-            var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee18(context) {
+            var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee9(context) {
               var currentSheet, anchor, tables, table, columns, stockTickerColumnIndex;
-              return _regeneratorRuntime().wrap(function _callee18$(_context19) {
-                while (1) switch (_context19.prev = _context19.next) {
+              return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+                while (1) switch (_context9.prev = _context9.next) {
                   case 0:
                     currentSheet = context.workbook.worksheets.getActiveWorksheet(); // Step 1: Add title
                     anchor = currentSheet.getRange("A15"); // anchor.load("values");
@@ -673,27 +405,27 @@ function _addTicker() {
                     anchor.values = [["Ticker"]];
                     anchor.format.font.color = "black";
                     anchor.format.font.bold = true;
-                    _context19.next = 7;
+                    _context9.next = 7;
                     return context.sync();
                   case 7:
                     // Step 2: Add event to talbe cell (Column ticker)
                     currentSheet.load("tables");
-                    _context19.next = 10;
+                    _context9.next = 10;
                     return context.sync();
                   case 10:
                     tables = currentSheet.tables;
                     tables.load("*");
-                    _context19.next = 14;
+                    _context9.next = 14;
                     return context.sync();
                   case 14:
                     table = tables.getItemAt(0);
                     table.load("columns, rows");
-                    _context19.next = 18;
+                    _context9.next = 18;
                     return context.sync();
                   case 18:
                     columns = table.columns;
                     columns.load("items");
-                    _context19.next = 22;
+                    _context9.next = 22;
                     return context.sync();
                   case 22:
                     stockTickerColumnIndex = -1;
@@ -703,44 +435,44 @@ function _addTicker() {
                       }
                     });
                     if (!(stockTickerColumnIndex === -1)) {
-                      _context19.next = 26;
+                      _context9.next = 26;
                       break;
                     }
                     throw new Error("Column 'Stock Ticker' not found.");
                   case 26:
                     // Step 3: Add an event handler to the worksheet to detect cell activation
                     currentSheet.onSelectionChanged.add(/*#__PURE__*/function () {
-                      var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee17(event) {
-                        return _regeneratorRuntime().wrap(function _callee17$(_context18) {
-                          while (1) switch (_context18.prev = _context18.next) {
+                      var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee8(event) {
+                        return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+                          while (1) switch (_context8.prev = _context8.next) {
                             case 0:
-                              _context18.next = 2;
+                              _context8.next = 2;
                               return onTickerSelected(context, stockTickerColumnIndex, event.address);
                             case 2:
                             case "end":
-                              return _context18.stop();
+                              return _context8.stop();
                           }
-                        }, _callee17);
+                        }, _callee8);
                       }));
-                      return function (_x16) {
+                      return function (_x12) {
                         return _ref4.apply(this, arguments);
                       };
                     }());
                   case 27:
                   case "end":
-                    return _context19.stop();
+                    return _context9.stop();
                 }
-              }, _callee18);
+              }, _callee9);
             }));
-            return function (_x15) {
+            return function (_x11) {
               return _ref3.apply(this, arguments);
             };
           }());
         case 2:
         case "end":
-          return _context20.stop();
+          return _context10.stop();
       }
-    }, _callee19);
+    }, _callee10);
   }));
   return _addTicker.apply(this, arguments);
 }
@@ -748,43 +480,43 @@ function addRevenueHistory() {
   return _addRevenueHistory.apply(this, arguments);
 }
 function _addRevenueHistory() {
-  _addRevenueHistory = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee21() {
-    return _regeneratorRuntime().wrap(function _callee21$(_context22) {
-      while (1) switch (_context22.prev = _context22.next) {
+  _addRevenueHistory = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
+    return _regeneratorRuntime().wrap(function _callee12$(_context12) {
+      while (1) switch (_context12.prev = _context12.next) {
         case 0:
-          _context22.next = 2;
+          _context12.next = 2;
           return Excel.run(/*#__PURE__*/function () {
-            var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee20(context) {
+            var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee11(context) {
               var anchor, formular;
-              return _regeneratorRuntime().wrap(function _callee20$(_context21) {
-                while (1) switch (_context21.prev = _context21.next) {
+              return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+                while (1) switch (_context11.prev = _context11.next) {
                   case 0:
                     anchor = context.workbook.worksheets.getActiveWorksheet().getRange("A16");
                     anchor.values = [["Revenues (Last 20 quarters)"]];
                     anchor.format.font.color = "black";
                     anchor.format.font.bold = true;
-                    _context21.next = 6;
+                    _context11.next = 6;
                     return context.sync();
                   case 6:
                     formular = context.workbook.worksheets.getActiveWorksheet().getRange("A17");
                     formular.values = [["=CONTOSO.GETREVENUEHISTORY(B15)"]];
-                    _context21.next = 10;
+                    _context11.next = 10;
                     return context.sync();
                   case 10:
                   case "end":
-                    return _context21.stop();
+                    return _context11.stop();
                 }
-              }, _callee20);
+              }, _callee11);
             }));
-            return function (_x17) {
+            return function (_x13) {
               return _ref5.apply(this, arguments);
             };
           }());
         case 2:
         case "end":
-          return _context22.stop();
+          return _context12.stop();
       }
-    }, _callee21);
+    }, _callee12);
   }));
   return _addRevenueHistory.apply(this, arguments);
 }
@@ -792,53 +524,53 @@ function addMarketCapHistory() {
   return _addMarketCapHistory.apply(this, arguments);
 }
 function _addMarketCapHistory() {
-  _addMarketCapHistory = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee23() {
-    return _regeneratorRuntime().wrap(function _callee23$(_context24) {
-      while (1) switch (_context24.prev = _context24.next) {
+  _addMarketCapHistory = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee14() {
+    return _regeneratorRuntime().wrap(function _callee14$(_context14) {
+      while (1) switch (_context14.prev = _context14.next) {
         case 0:
-          _context24.next = 2;
+          _context14.next = 2;
           return Excel.run(/*#__PURE__*/function () {
-            var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee22(context) {
+            var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee13(context) {
               var anchor, formular;
-              return _regeneratorRuntime().wrap(function _callee22$(_context23) {
-                while (1) switch (_context23.prev = _context23.next) {
+              return _regeneratorRuntime().wrap(function _callee13$(_context13) {
+                while (1) switch (_context13.prev = _context13.next) {
                   case 0:
                     anchor = context.workbook.worksheets.getActiveWorksheet().getRange("G16");
                     anchor.values = [["Market Caps (Last 20 quarters)"]];
                     anchor.format.font.color = "black";
                     anchor.format.font.bold = true;
-                    _context23.next = 6;
+                    _context13.next = 6;
                     return context.sync();
                   case 6:
                     formular = context.workbook.worksheets.getActiveWorksheet().getRange("G17");
                     formular.values = [["=CONTOSO.GETMARKETCAPHISTORY(B15)"]];
-                    _context23.next = 10;
+                    _context13.next = 10;
                     return context.sync();
                   case 10:
                   case "end":
-                    return _context23.stop();
+                    return _context13.stop();
                 }
-              }, _callee22);
+              }, _callee13);
             }));
-            return function (_x18) {
+            return function (_x14) {
               return _ref6.apply(this, arguments);
             };
           }());
         case 2:
         case "end":
-          return _context24.stop();
+          return _context14.stop();
       }
-    }, _callee23);
+    }, _callee14);
   }));
   return _addMarketCapHistory.apply(this, arguments);
 }
-function sleepRandomly(_x9, _x10) {
+function sleepRandomly(_x5, _x6) {
   return _sleepRandomly.apply(this, arguments);
 }
 function _sleepRandomly() {
-  _sleepRandomly = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee24(prefer, min) {
-    return _regeneratorRuntime().wrap(function _callee24$(_context25) {
-      while (1) switch (_context25.prev = _context25.next) {
+  _sleepRandomly = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee15(prefer, min) {
+    return _regeneratorRuntime().wrap(function _callee15$(_context15) {
+      while (1) switch (_context15.prev = _context15.next) {
         case 0:
           if (!prefer) {
             prefer = 3;
@@ -846,7 +578,7 @@ function _sleepRandomly() {
           if (!min) {
             min = 0.5;
           }
-          return _context25.abrupt("return", new Promise(function (resolver) {
+          return _context15.abrupt("return", new Promise(function (resolver) {
             var timeSpan = Math.max(min, Math.random() * prefer);
             window.setTimeout(function () {
               resolver();
@@ -854,31 +586,31 @@ function _sleepRandomly() {
           }));
         case 3:
         case "end":
-          return _context25.stop();
+          return _context15.stop();
       }
-    }, _callee24);
+    }, _callee15);
   }));
   return _sleepRandomly.apply(this, arguments);
 }
-function setConditionalFormaating(_x11, _x12) {
+function setConditionalFormaating(_x7, _x8) {
   return _setConditionalFormaating.apply(this, arguments);
 }
 function _setConditionalFormaating() {
-  _setConditionalFormaating = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee26(rangeStr, base) {
-    return _regeneratorRuntime().wrap(function _callee26$(_context27) {
-      while (1) switch (_context27.prev = _context27.next) {
+  _setConditionalFormaating = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee17(rangeStr, base) {
+    return _regeneratorRuntime().wrap(function _callee17$(_context17) {
+      while (1) switch (_context17.prev = _context17.next) {
         case 0:
-          return _context27.abrupt("return", Excel.run(/*#__PURE__*/function () {
-            var _ref7 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee25(context) {
+          return _context17.abrupt("return", Excel.run(/*#__PURE__*/function () {
+            var _ref7 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee16(context) {
               var sheet, range, conditionalFormat, iconSetCF;
-              return _regeneratorRuntime().wrap(function _callee25$(_context26) {
-                while (1) switch (_context26.prev = _context26.next) {
+              return _regeneratorRuntime().wrap(function _callee16$(_context16) {
+                while (1) switch (_context16.prev = _context16.next) {
                   case 0:
                     // Step 1: Load the Excel workbook and worksheet
                     sheet = context.workbook.worksheets.getActiveWorksheet(); // Step 2: Access the specific range of cells you want to apply conditional formatting to
                     range = sheet.getRange(rangeStr);
                     range.conditionalFormats.clearAll();
-                    _context26.next = 5;
+                    _context16.next = 5;
                     return context.sync();
                   case 5:
                     // Step 3: Add an icon set conditional format to the range
@@ -910,15 +642,15 @@ function _setConditionalFormaating() {
                     }];
 
                     // Step 5: Sync the context to apply the changes
-                    _context26.next = 11;
+                    _context16.next = 11;
                     return context.sync();
                   case 11:
                   case "end":
-                    return _context26.stop();
+                    return _context16.stop();
                 }
-              }, _callee25);
+              }, _callee16);
             }));
-            return function (_x19) {
+            return function (_x15) {
               return _ref7.apply(this, arguments);
             };
           }()).catch(function (error) {
@@ -926,9 +658,9 @@ function _setConditionalFormaating() {
           }));
         case 1:
         case "end":
-          return _context27.stop();
+          return _context17.stop();
       }
-    }, _callee26);
+    }, _callee17);
   }));
   return _setConditionalFormaating.apply(this, arguments);
 }
