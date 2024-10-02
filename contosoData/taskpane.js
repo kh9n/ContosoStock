@@ -241,7 +241,7 @@ function _setAutoOpenOn() {
               return _regeneratorRuntime().wrap(function _callee3$(_context3) {
                 while (1) switch (_context3.prev = _context3.next) {
                   case 0:
-                    Office.context.document.settings.set("ButtonId1", true);
+                    Office.context.document.settings.set("Office.AutoShowTaskpaneWithDocument", true);
                     Office.context.document.settings.saveAsync();
                     _context3.next = 4;
                     return context.sync();
